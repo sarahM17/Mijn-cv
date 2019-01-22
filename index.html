@@ -5,132 +5,265 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <meta http-equiv="X-UA-Compatible" content="ie=edge">
             <link rel="StyleSheet" type="text/css" href="cv.css" media="screen">
+            <link href="sarah.michaux@hotmail.be" target="E-mail">Sarah Michaux</a>
             <title>
                 Mijn-cv/README.html 
             </title>
+        <style>
+            .nested { grid-area: header; }
+            .menu { grid-area: menu; }
+            .main { grid-area: main; }
+            .right { grid-area: right; }
+            .footer { grid-area: footer; }
+
+            .wrapper {
+                display: grid;
+                grid-template-areas:
+                'header header header header header header'
+                'menu main main main right right'
+                'menu main main main right right'
+                'menu footer footer footer footer footer';
+                grid-gap: 1em;
+            }
+            .wrapper > div {
+                background-color: lavenderblush;
+                text-align: left;
+                padding: 20px 0;
+                font-size: 15px;
+                border-color: crimson;
+                border-style: solid;
+            }
+            .nested {
+                display:grid;
+                grid-template-columns:1fr 2fr;
+                grid-template-rows: 1fr;
+            }
+            .nested > div{
+                background-color: crimson;
+                font-size: 20px;
+                border-style: solid;
+                border-color:lavenderblush;
+                text-align: center;
+                color: whitesmoke;
+            }
+            .menu {
+                display: grid;
+                grid-template-rows: auto;
+                grid-template-columns: 2fr;
+            }
+            .main {
+                display: grid;
+                grid-column-start: 3fr;
+            }
+            .main > div {
+                font-size: 15px;
+                border-style: solid;
+                border-color:lavenderblush;
+                text-align: left;
+                color: black;
+            }
+            .functie {
+                float: left;
+            }
+            .ervaring > div {
+                font-size: 15px;
+            }
+            .jaar {
+                display: grid;
+                float: right;
+            }
+            .jaar > div {
+                padding-bottom: 40px;
+            }
+            .opleiding > div {
+                font-size: 15px;
+            }
+            em {
+                background-color: crimson;
+                color: whitesmoke;
+            }
+            .soort {
+                float: left;
+            }
+            .datum {
+                display: grid;
+                float: right;
+            }
+            .datum div {
+                padding-bottom: 30px;
+            }
+            table {
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            th, td {
+                padding: 8px;
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+            }
+
+            tr:hover {
+                background-color: lightcoral; 
+            }
+            a:link, a:visited {
+                background-color: crimson;
+                color: whitesmoke;
+                padding: 14px 25px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+            }
+            .vaardigheden {
+                float: bottom left;
+            }
+        </style>
     </head>
 </html>
 <body>
-    <section class="container">
-        <div class="item-a">item-a
-            <h2>CV</h2>
+    <div class="wrapper">
+        <div class="nested">
+        <div>
+           <h3>Curriculum Vitae</h3>
         </div>
-        <div class="item-b">item-b
-            <h2>Competenties</h2>
-        </div>
-        <div class="item-c">item-c
-            <h2>Ervaring</h2>
-        </div>
-        <div class="item-d">item-d
-            <h2>Opleiding</h2>
-        </div>
-        <div class="item-e">item-e
-            <h2>Vaardigheden</h2>
-        </div>
-        <div class="item-f">item-f
-            <h2>Varia</h2>
-        </div>
-        <div class="item-g">item-g
-            <h2>Michaux Sarah</h2>
+        <div>
+            <h2>Sarah Michaux</h2>
             <ul>
                 <li>17/01/1997</li>
-            </ul>
-            <h2>Adres:</h2>
-            <ul>
-                <li>Peperstraat 14, 
-                    3590 Diepenbeek</li>
-            </ul>
-            <h2>E-mail:</h2>
-            <ul>
-                <li><sarah class="Sarah Michaux"></sarah></li>            
-            </ul>
-            <h2>Rijksregisternummer:</h2>
-            <ul>
-                <li>97/01/17-354.16</li>
+                <li>Peperstraat 14, <br>3590 Diepenbeek</li>
+                <li>E-mail: Sarah Michaux</li>
+                <li>Rijbewijs B (eigen wagen)</li>
             </ul>
         </div>
-        <div class="item-h">item-h
-            <dl>
-                <dt>Samenwerken</dt>
-                <dd>- Eén must tijdens mijn vorige job, opleiding.</dd>
-                <dd>- Ik vindt het heerlijk om samen met een groep mensen een gemeenschappelijk doel te bereiken en zo tot het uiteindelijke doel te geraken.</dd>
-                <dt>Resultaatgericht</dt>
-                <dd>- Niet snel content met het resultaat. Alles dubbel checken het is pas af, als alles in orde is.</dd>
-                <dt>Creativiteit</dt>
-                <dd>- Van kinds af aan creatief geweest tijdens tekenlessen, danslessen.</dd>
-                <dd>- Altijd creatief van geest geweest. Droom was <strong>"Architect, ontwerper worden"</strong></dd>
-                <dt>Multidisciplinair</dt>
-                <dd>- vb: als bordenbouwer moest ik kunnen bedraden, planlezen. Ondertussen kon ik ook coachen en alles uittekenen.</dd>
-                <dt>Doorzettingvermogen</dt>
-                <dd>- Mijn motto is wie <strong>"A"</strong> zegt moet ook <strong>"B"</strong> zeggen. Wanneer ik een doel voor ogen heb doe ik er alles aan om het gewenste eindresultaat te bereiken.</dd>
-            </dl> 
         </div>
-        <div class="item-i">item-i
-
+        <div class="menu">
+            <div>menu</div>
         </div>
-        <div class="item-j">item-j
-            <style>
-                table {
-                    border-collapse: collapse;
-                    width: 100%;
-                }
-                th, td {
-                    padding: 8px;
-                    text-align: left;
-                    border-bottom: 1px solid #ddd;
-                }
-                tr:hover {background-color:#f5f5f5;}
-            </style>
-            <table>
-                <tr>
-                    <th>Jaar/Jaar</th>
-                    <th>Opleiding</th>
-                    <th>School</th>
-                </tr>
-                <tr>
-                    <td>2011/2015</td>
-                    <td>Elektrische installatie technieken TSO</td>
-                    <td>Technisch Instituut Sint-Jozef</td>
-                </tr>
-                <tr>
-                    <td>30/06/2015</td>
-                    <td>Diploma secundair onderwijs TSO</td>
-                    <td>Technisch Instituut Sint-Jozef</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </table>
-        </div>
-        <div class="item-k">item-k
-            <h2>Talenkennis</h2>
-        </div>
-        <div class="item-l">item-l
-            <h2>Computerkennis</h2>
-        </div>
-        <div class="item-m">item-m
-            <h2>Beschikbaarheid:</h2>
-            <ul>
-                <li>Onmiddellijk beschikbaar (Voor voltijdse indiensttreding).</li>
+        <div class="main">
+            <div><em>Competenties</em></div>
+            <ul><strong>Samenwerken</strong>
+                <li>Altijd een must geweest</li>
+                <li>Heerlijk om samen met een groep <br>tot het uiteindelijke resultaat te komen.</li>
             </ul>
-            <h2>Rijbewijs:</h2>
-            <ul>
-                <li>In bezit van Rijbewijs B (eigen wagen).</li>
+            <ul><strong>Resultaatgericht</strong>
+                <li>Voor mij is iets nooit af, het resultaat kan altijd beter.</li>
             </ul>
+            <ul><strong>Creativiteit</strong>
+                <li>Altijd creatief van geest geweest.</li>
+                <li>Droom was "Architect of "Tekenaar" worden.</li>
+            </ul>
+            <ul><strong>Multidisciplinair</strong>
+                <li>Ervaring opgedaan in coachen, lesgeven</li>
+                <li>Op technisch vlak ook zeer sterk.</li>
+            </ul>
+            <ul><strong>Doorzettingsvermogen</strong>
+                <li>Mijn motto is wie "A" zegt moet ook "B" zeggen.</li>
+            </ul>
+            <div class="ervaring">
+                <div><em>Ervaring</em></div>
+                <div class="functie">
+                    <div><strong>Functie/Bedrijf</strong>
+                        <ul><strong>Café Manger, Hasselt</strong>
+                            <li>Opdienen, afruimen.</li>
+                            <li>Bestellingen opnemen, kassa bedienen.</li>
+                        </ul>
+                        <ul><strong>Traiteur, Diepenbeek</strong>
+                            <li>Opdienen, afruimen.</li>
+                            <li>Eten klaarmaken, borden dresseren.</li>
+                        </ul>
+                        <ul><strong>Poetsbedrijf 'Care', Hasselt</strong>
+                            <li>Kantoren, toiletten, vergaderzalen poetsen</li>
+                        </ul>
+                        <ul><strong>Budgetslager, Diepenbeek</strong>
+                            <li>Verstoog bijvullen, klanten bedienen</li>
+                        </ul>
+                        <ul><strong>P&V Elektrotechniek, Heusden-Zolder</strong>
+                            <li>Kasten opbouwen, bedraden en afwerken.</li>
+                            <li>Opleiden van interimmers.</li>
+                        </ul>
+                        <ul><strong>Junior Webdeveloper, Becode, Genk</strong>
+                            <li>Ontwerpen van websites</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="jaar">
+                    <div class="Maand/Jaar-Maand/Jaar"><strong>Maand/Jaar-Maand/Jaar</strong></div>
+                    <div class="Café">04/2014-06/2015 (weekendwerk)</div>
+                    <div class="Traiteur">07/2015-heden (weekendwerk)</div>
+                    <div class="Poetsbedrijf">08/2013 (Vakantiewerk)</div>
+                    <div class="Budgetslager">07/2014-08/2014 (Vakantiewerk)</div>
+                    <div class="Bordenbouw">08/2015-01/2019 (Vaste job)</div>
+                    <div class="Becode">01/2019-07/2019 (Opleiding)</div>
+                </div> 
             </div>
-        <div class="item-n">item-n
-            <h2>Technisch instituut Sint-Jozef te Bilzen</h2>
-            <ul>
-                <li>Elektrische installatie technieken TSO</li>
-            </ul>
+            <div class="opleiding">
+            <div><em>Opleiding</em></div>
+            <div class="soort">
+                <div><strong>School/Diploma-Studie</strong>
+                    <ul>Technisch instituut Sint-Jozef, Bilzen
+                        <li>Elektrische installatie technieken.</li>
+                    </ul>
+                    <ul>Technisch instituut Sint-Jozef, Bilzen
+                        <li>Diploma secundair onderwijs.</li>
+                    </ul>
+                    <ul>Lagere school 'T bieske', Gellik
+                        <li>Diploma blindelings typen</li>
+                    </ul>
+                    <ul>Technisch instituut Sint-Jozef, Bilzen
+                        <li>Diploma VCA</li>
+                    </ul>
+                    <ul>Fortio bedrijfsopleiding
+                        <li>Opleiding frans</li>
+                    </ul>
+                    <ul>Becode
+                        <li>Opleiding Junior Webdeveloper</li>
+                    </ul>
+                </div>
+            </div>
+                <div class="datum">
+                    <div><strong>Jaar-Jaar</strong></div>
+                    <div>2011-2015</div>
+                    <div>06/2015</div>
+                    <div>2008-2009</div>
+                    <div>2013-2014</div>
+                    <div>2017-2018</div>
+                    <div>2019-heden</div>
+                </div>
+            </div>
+            </div class="vaardigheden"> 
+            <div><em>Vaardigheden</em>
+            <div class="computer">
+                <div><strong>computer</strong>
+                <ul>Word, excel
+                    <li>Zeer goede kennis</li>
+                </ul>
+                <ul>Eplan, SEE Electrical
+                    <li>Goede kennis</li>
+                </ul>
+            </div>
+            <div class="Talen">
+                <div><strong>Talen</strong>
+                <ul>Nederlands
+                    <li>Moedertaal</li>
+                </ul>
+                <ul>Frans
+                    <li>Vlotte beheersing</li>
+                </ul>
+                <ul>Engels
+                    <li>Elementaire kennis</li>
+                </ul>
+                <ul>Duits
+                    <li>Geen kennis</li>
+                </ul>
+            </div>
         </div>
-    </section>
-</body>
+    </div>   
+        <div class="right">
+            <div>right</div>
+        </div>
+        <div class="footer">
+            <div>footer</div>
+        </div>
+    </div>
+    </body>
 </html>
