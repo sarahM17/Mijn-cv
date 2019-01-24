@@ -10,6 +10,9 @@
                 Mijn-cv/README.html 
             </title>
         <style>
+            body {
+                background: linear-gradient(to bottom, whitesmoke 0%, darkslategrey 100%);
+            }
             .nested { grid-area: header; }
             .menu { grid-area: menu; }
             .main { grid-area: main; }
@@ -30,19 +33,19 @@
                 text-align: left;
                 padding: 20px 0;
                 font-size: 15px;
-                border-color: crimson;
+                border-color: darkslategrey;
                 border-style: solid;
             }
             .nested {
                 display:grid;
                 grid-template-columns:1fr 2fr;
-                grid-template-rows: 1fr;
+                grid-template-rows: auto;
             }
             .nested > div{
-                background-color: crimson;
+                background-color: darkslategrey;
                 font-size: 20px;
                 border-style: solid;
-                border-color:lavenderblush;
+                border-color: darkslategrey;
                 text-align: center;
                 color: whitesmoke;
             }
@@ -79,7 +82,7 @@
                 font-size: 15px;
             }
             em {
-                background-color: crimson;
+                background-color: darkslategrey;
                 color: whitesmoke;
             }
             .soort {
@@ -104,10 +107,10 @@
             }
 
             tr:hover {
-                background-color: lightcoral; 
+                background-color: grey; 
             }
             a:link, a:visited {
-                background-color: crimson;
+                background-color: darkslategrey;
                 color: whitesmoke;
                 padding: 14px 25px;
                 text-align: center;
@@ -116,6 +119,15 @@
             }
             .vaardigheden {
                 float: bottom left;
+            }
+            #image {
+                width: 125px;
+                height: 125px;
+                border: 2px solid whitesmoke;
+                border-radius: 8px;
+                position: absolute;
+                left: 500px;
+                top: 80px;
             }
         </style>
     </head>
@@ -127,6 +139,7 @@
            <h3>Curriculum Vitae</h3>
         </div>
         <div>
+            <img id="image" src="sarah.jpg">
             <h2>Sarah Michaux</h2>
             <ul>
                 <li>17/01/1997</li>
