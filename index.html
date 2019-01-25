@@ -6,12 +6,15 @@
             <meta http-equiv="X-UA-Compatible" content="ie=edge">
             <link rel="StyleSheet" type="text/css" href="cv.css" media="screen">
             <link href="sarah.michaux@hotmail.be" target="E-mail">Sarah Michaux</a>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
             <title>
                 Mijn-cv/README.html 
             </title>
         <style>
             body {
-                background: linear-gradient(to bottom, whitesmoke 0%, darkslategrey 100%);
+                background-image: url("White-Hexagons-Tech-Background-01_preview1.jpg");
+                background-size: auto;
+                background-repeat: no-repeat;
             }
             .nested { grid-area: header; }
             .menu { grid-area: menu; }
@@ -22,41 +25,78 @@
             .wrapper {
                 display: grid;
                 grid-template-areas:
-                'header header header header header header'
-                'menu main main main right right'
-                'menu main main main right right'
-                'menu footer footer footer footer footer';
-                grid-gap: 1em;
+                'header header header'
+                'main main right'
+                'main main right'
+                'footer footer footer';
+                grid-gap: 3mm;
+                width: 70%;
+                padding-left: 180px;
             }
             .wrapper > div {
                 background-color: lavenderblush;
                 text-align: left;
-                padding: 20px 0;
                 font-size: 15px;
-                border-color: darkslategrey;
-                border-style: solid;
+                border: 2px solid darkslategrey;
+                border-radius: 4px;
             }
             .nested {
                 display:grid;
-                grid-template-columns:1fr 2fr;
+                width: 100%;
+                grid-template-columns:35% 1fr;
                 grid-template-rows: auto;
+                border: 2px solid darkslategrey;
+                border-radius: 4px;
+                box-shadow: 0px 10px 10px 7px rgba(0,0,0,0.75)
             }
             .nested > div{
                 background-color: darkslategrey;
-                font-size: 20px;
+                background-position: center;
+                font-size: 18px;
                 border-style: solid;
                 border-color: darkslategrey;
                 text-align: center;
                 color: whitesmoke;
             }
-            .menu {
-                display: grid;
-                grid-template-rows: auto;
-                grid-template-columns: 2fr;
+            .hoofd {
+                text-align: left;
+                color: whitesmoke;
             }
+        
+            .topnav {
+                background-color: darkslategrey;
+                font-size: 15px;
+                border-style: solid;
+                border-color: black;
+                border-width: 0px;
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                position: relative;
+                top: 200px;
+            }
+
+            .topnav a {
+                background-color: darkslategrey;
+                display: inline;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 5px 5px;
+                text-decoration: none;
+                position: relative;
+                right: 20px;
+            }
+
+            .topnav a:hover {
+                background-color: darkgray;
+                color: burlywood;
+            }
+    
             .main {
                 display: grid;
-                grid-column-start: 3fr;
+                grid-template-columns: auto;
+                box-shadow: 0px 10px 10px 7px rgba(0,0,0,0.75)
             }
             .main > div {
                 font-size: 15px;
@@ -66,8 +106,14 @@
                 color: black;
             }
             .functie {
-                float: left;
+                position: absolute;
+                left: 100px;
             }
+            .functie > div {
+                position: relative;
+                left: 100px;
+            }
+        
             .ervaring > div {
                 font-size: 15px;
             }
@@ -76,7 +122,9 @@
                 float: right;
             }
             .jaar > div {
-                padding-bottom: 40px;
+                position: relative;
+                left: 35px;
+                padding-bottom: 25px;
             }
             .opleiding > div {
                 font-size: 15px;
@@ -86,7 +134,8 @@
                 color: whitesmoke;
             }
             .soort {
-                float: left;
+                position: absolute;
+                left: 200px;
             }
             .datum {
                 display: grid;
@@ -94,6 +143,8 @@
             }
             .datum div {
                 padding-bottom: 30px;
+                position: relative;
+                left: -20px;
             }
             table {
                 border-collapse: collapse;
@@ -117,17 +168,52 @@
                 text-decoration: none;
                 display: inline-block;
             }
-            .vaardigheden {
-                float: bottom left;
+        
+            .flex-container {
+                display: flex;
             }
+
+            .flex-container > div {
+                width: 40px;
+                margin: 0px;
+                text-align: left;
+                line-height: 40px;
+                font-size: 15px;
+            }
+
             #image {
-                width: 125px;
-                height: 125px;
+                width: 150px;
+                height: 150px;
                 border: 2px solid whitesmoke;
-                border-radius: 8px;
+                border-radius: 4px;
                 position: absolute;
-                left: 500px;
-                top: 80px;
+                left: 215px;
+                top: 50px;
+            }
+            .right {
+                display: grid;
+                grid-template-rows: auto;
+                grid-template-columns: auto;
+            }
+            .material-icons.md-36 { font-size: 36px;
+                float: left;
+            }
+            .hoofdmaand > div {
+                position: relative;
+                left: -40px;
+            }
+            .functiebedrijf > div {
+                position: relative;
+                left: 30px;
+            }
+            .schooldiploma > div {
+                position: relative;
+                left: 30px;
+            }
+            .computer > div {
+                position: relative;
+                left: 10px;
+                top: 20px;
             }
         </style>
     </head>
@@ -135,25 +221,34 @@
 <body>
     <div class="wrapper">
         <div class="nested">
-        <div>
-           <h3>Curriculum Vitae</h3>
+        <div class="naam">
+            <div class="topnav">
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+            </div>
         </div>
         <div>
             <img id="image" src="sarah.jpg">
-            <h2>Sarah Michaux</h2>
-            <ul>
-                <li>17/01/1997</li>
-                <li>Peperstraat 14, <br>3590 Diepenbeek</li>
-                <li>E-mail: Sarah Michaux</li>
-                <li>Rijbewijs B (eigen wagen)</li>
-            </ul>
+            <div class="hoofd">
+                <div class="naam">
+                    <h3>Curriculum Vitae</h3>
+                </div>
+                <h2>Sarah Michaux</h2>
+                <ul>
+                    <li>17/01/1997</li>
+                    <li>Peperstraat 14, <br>3590 Diepenbeek</li>
+                    <li>E-mail: Sarah Michaux</li>
+                    <li>Rijbewijs B (eigen wagen)</li>
+                </ul>
+            </div>
         </div>
-        </div>
-        <div class="menu">
-            <div>menu</div>
         </div>
         <div class="main">
-            <div><em>Competenties</em></div>
+            <div class="flex-container">
+                <div><i class="material-icons md-36">supervisor_account</i></div>
+                <div><em>Competenties</em></div>
+            </div>
             <ul><strong>Samenwerken</strong>
                 <li>Altijd een must geweest</li>
                 <li>Heerlijk om samen met een groep <br>tot het uiteindelijke resultaat te komen.</li>
@@ -173,9 +268,15 @@
                 <li>Mijn motto is wie "A" zegt moet ook "B" zeggen.</li>
             </ul>
             <div class="ervaring">
-                <div><em>Ervaring</em></div>
+                <div class="flex-container">
+                    <div><i class="material-icons md-36">work</i></div>
+                    <div><em>Ervaring</em></div>
+                </div>
                 <div class="functie">
-                    <div><strong>Functie/Bedrijf</strong>
+                    <div class="functiebedrijf">
+                        <div><strong>Functie/Bedrijf</strong></div>
+                    </div>
+                    <div class="werk">
                         <ul><strong>Café Manger, Hasselt</strong>
                             <li>Opdienen, afruimen.</li>
                             <li>Bestellingen opnemen, kassa bedienen.</li>
@@ -200,19 +301,27 @@
                     </div>
                 </div>
                 <div class="jaar">
-                    <div class="Maand/Jaar-Maand/Jaar"><strong>Maand/Jaar-Maand/Jaar</strong></div>
-                    <div class="Café">04/2014-06/2015 (weekendwerk)</div>
-                    <div class="Traiteur">07/2015-heden (weekendwerk)</div>
-                    <div class="Poetsbedrijf">08/2013 (Vakantiewerk)</div>
-                    <div class="Budgetslager">07/2014-08/2014 (Vakantiewerk)</div>
-                    <div class="Bordenbouw">08/2015-01/2019 (Vaste job)</div>
-                    <div class="Becode">01/2019-07/2019 (Opleiding)</div>
+                    <div class="hoofdmaand">
+                        <div class="Maand/Jaar"><strong>Maand/Jaar-Maand/Jaar</strong></div>
+                    </div>
+                    <div class="Café">04/2014-06/2015 <br> (weekendwerk)</div>
+                    <div class="Traiteur">07/2015-heden <br> (weekendwerk)</div>
+                    <div class="Poetsbedrijf">08/2013 <br> (Vakantiewerk)</div>
+                    <div class="Budgetslager">07/2014-08/2014 <br> (Vakantiewerk)</div>
+                    <div class="Bordenbouw">08/2015-01/2019 <br> (Vaste job)</div>
+                    <div class="Becode">01/2019-07/2019 <br> (Opleiding)</div>
                 </div> 
             </div>
             <div class="opleiding">
-            <div><em>Opleiding</em></div>
+                <div class="flex-container">
+                    <div><i class="material-icons md-36">class</i></div>
+                    <div><em>Opleiding</em></div>
+                </div>
             <div class="soort">
-                <div><strong>School/Diploma-Studie</strong>
+                <div class="schooldiploma">
+                    <div><strong>School/Diploma-Studie</strong></div>
+                </div>
+                <div class="school"> 
                     <ul>Technisch instituut Sint-Jozef, Bilzen
                         <li>Elektrische installatie technieken.</li>
                     </ul>
@@ -243,39 +352,41 @@
                     <div>2019-heden</div>
                 </div>
             </div>
-            </div class="vaardigheden"> 
-            <div><em>Vaardigheden</em>
-            <div class="computer">
-                <div><strong>computer</strong>
-                <ul>Word, excel
-                    <li>Zeer goede kennis</li>
-                </ul>
-                <ul>Eplan, SEE Electrical
-                    <li>Goede kennis</li>
-                </ul>
             </div>
-            <div class="Talen">
-                <div><strong>Talen</strong>
-                <ul>Nederlands
-                    <li>Moedertaal</li>
-                </ul>
-                <ul>Frans
-                    <li>Vlotte beheersing</li>
-                </ul>
-                <ul>Engels
-                    <li>Elementaire kennis</li>
-                </ul>
-                <ul>Duits
-                    <li>Geen kennis</li>
-                </ul>
-            </div>
-        </div>
-    </div>   
         <div class="right">
-            <div>right</div>
-        </div>
-        <div class="footer">
-            <div>footer</div>
+            <div class="vaardigheden">
+                <div class="flex-container"> 
+                    <div><i class="material-icons md-36">extension</i></div>
+                    <div><em>Vaardigheden</em></div>
+                </div>    
+                <div class="computer">
+                    <div><strong>computer</strong>
+                    <ul>Word, excel
+                        <li>Zeer goede kennis</li>
+                    </ul>
+                    <ul>Eplan, SEE Electrical
+                        <li>Goede kennis</li>
+                    </ul>
+                </div>
+                <div class="Talen">
+                    <div><strong>Talen</strong>
+                    <ul>Nederlands
+                        <li>Moedertaal</li>
+                    </ul>
+                    <ul>Frans
+                        <li>Vlotte beheersing</li>
+                    </ul>
+                    <ul>Engels
+                        <li>Elementaire kennis</li>
+                    </ul>
+                    <ul>Duits
+                        <li>Geen kennis</li>
+                    </ul>
+                    </div>
+                </div>
+            <div class="varia">
+                <div></div>
+            </div>
         </div>
     </div>
     </body>
